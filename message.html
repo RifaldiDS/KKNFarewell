@@ -39,7 +39,7 @@
       <span class="message-brand-copy"><strong>KKN FAREWELL</strong><small>one last letter</small></span>
     </div>
     <div class="header-actions">
-      <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Pause background music" title="Background music">
+      <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play background music" title="Background music">
         <span class="music-toggle-icon" aria-hidden="true">♪</span>
       </button>
     </div>
@@ -212,16 +212,14 @@
     This farewell letter is personal and cannot be copied.
   </div>
 
-  <audio id="backgroundMusic" preload="metadata" loop>
-    <source src="assets/audio/titik-nadir-karaoke-piano.mp3" type="audio/mpeg" />
-  </audio>
-
   <footer class="message-footer">
     <span id="themeLabel">KKN Farewell</span>
     <span>Made for the memories we shared.</span>
   </footer>
 
+  <audio id="backgroundMusic" src="assets/audio/titik-nadir-soft.mp3" preload="auto" loop playsinline webkit-playsinline></audio>
+
   <script src="js/messages.js?v=20260629-scrollfix3"></script>
-  <script src="js/message.js?v=20260629-scrollfix3"></script>
+  <script src="js/message.js?v=20260818-simplemobileaudio1"></script>
 </body>
 </html>

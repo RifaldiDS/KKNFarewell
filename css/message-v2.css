@@ -2263,42 +2263,28 @@ body.message-erasing .theme-background {
 
 
 /* =========================================================
-   SUBTLE BACKGROUND MUSIC CONTROL
-   Music starts only after the recipient opens the envelope.
+   SIMPLE MOBILE-SAFE MUSIC CONTROL
+   Audio level is baked into the MP3 itself; no Web Audio API.
    ========================================================= */
 .music-toggle {
   width: 38px;
   height: 38px;
-  display: inline-grid;
+  display: grid;
   place-items: center;
   padding: 0;
-  color: var(--theme-muted, rgba(255,255,255,.72));
-  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border: 1px solid rgba(255,255,255,.28);
   border-radius: 999px;
-  background: rgba(255,255,255,.10);
-  box-shadow: 0 8px 22px rgba(25,20,30,.08);
-  backdrop-filter: blur(10px);
+  color: currentColor;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 10px 28px rgba(27,20,33,.12);
+  backdrop-filter: blur(12px);
   cursor: pointer;
-  opacity: .62;
-  transition: opacity .22s ease, transform .22s ease, background .22s ease, color .22s ease;
+  transition: transform .22s ease, background .22s ease, opacity .22s ease;
 }
 .music-toggle:hover,
-.music-toggle:focus-visible {
-  opacity: 1;
-  transform: translateY(-1px);
-  outline: none;
-}
-.music-toggle[aria-pressed="true"] {
-  opacity: .88;
-  color: var(--edition-ink, var(--theme-text));
-  background: color-mix(in srgb, var(--edition-paper, white) 62%, transparent);
-}
-.music-toggle-icon {
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  transform: translateY(-1px);
-}
-@media (max-width: 700px) {
-  .music-toggle { width: 34px; height: 34px; }
-}
+.music-toggle:focus-visible { transform: translateY(-1px); background: rgba(255,255,255,.2); }
+.music-toggle[aria-pressed="true"] .music-toggle-icon { animation: music-pulse 1.8s ease-in-out infinite; }
+.music-toggle.needs-tap { box-shadow: 0 0 0 4px rgba(255,255,255,.14), 0 10px 28px rgba(27,20,33,.12); }
+.music-toggle-icon { font-size: 1rem; line-height: 1; }
+@keyframes music-pulse { 0%,100%{transform:scale(1);opacity:.72} 50%{transform:scale(1.14);opacity:1} }
+@media (max-width: 640px) { .music-toggle { width: 36px; height: 36px; } }

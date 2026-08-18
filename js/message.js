@@ -69,11 +69,6 @@
   let isTransitioning = false;
   let isErasing = false;
   let lastFocusedElement = null;
-  const MUSIC_TARGET_VOLUME = 0.16;
-  let musicFadeFrame = null;
-  let musicHasStarted = false;
-  let musicMutedByUser = false;
-  let musicPausedForVisibility = false;
 
   body.dataset.theme = data.theme;
   body.dataset.design = data.design || "warm-home";
@@ -125,38 +120,31 @@
   setupSceneReveal();
   setupPrivacyProtection();
 
+  // Keep mobile audio intentionally simple: no Web Audio / GainNode.
+  // The MP3 itself has already been mixed quietly, so iPhone Safari can play
+  // it at normal media volume without relying on JS volume APIs.
+  if (backgroundMusic) {
+    backgroundMusic.volume = 1;
+  }
+
   envelope.addEventListener("click", () => {
-    startBackgroundMusic();
+    startBackgroundMusicFromTap();
     beginOpenSequence(1320);
   });
   openTextButton.addEventListener("click", () => {
-    startBackgroundMusic();
+    startBackgroundMusicFromTap();
     beginOpenSequence(1160);
   });
 
-  if (backgroundMusic) {
-    backgroundMusic.volume = 0;
-  }
-
-  if (musicToggle) {
-    musicToggle.addEventListener("click", toggleBackgroundMusic);
-  }
-
-  document.addEventListener("visibilitychange", () => {
-    if (!backgroundMusic || !musicHasStarted || musicMutedByUser) return;
-
-    if (document.hidden && !backgroundMusic.paused) {
-      musicPausedForVisibility = true;
-      backgroundMusic.pause();
-    } else if (!document.hidden && musicPausedForVisibility) {
-      musicPausedForVisibility = false;
-      backgroundMusic.play().catch(() => {});
-    }
-  });
+  if (musicToggle) musicToggle.addEventListener("click", toggleBackgroundMusic);
 
   finishReadingButton.addEventListener("click", openFinishDialog);
   keepReadingButton.addEventListener("click", closeFinishDialog);
-  confirmFinishButton.addEventListener("click", eraseMessageForever);
+  confirmFinishButton.addEventListener("click", () => {
+    if (backgroundMusic) backgroundMusic.pause();
+    updateMusicToggle(false);
+    eraseMessageForever();
+  });
 
   finishDialog.addEventListener("click", (event) => {
     if (event.target.matches("[data-dialog-close]")) closeFinishDialog();
@@ -168,50 +156,48 @@
     }
   });
 
-  function startBackgroundMusic() {
-    if (!backgroundMusic || musicMutedByUser) return;
+  function startBackgroundMusicFromTap() {
+    if (!backgroundMusic || !backgroundMusic.paused) return;
 
-    if (musicHasStarted && !backgroundMusic.paused) return;
-    musicHasStarted = true;
-    musicPausedForVisibility = false;
-    backgroundMusic.volume = 0;
-
+    // Crucial for iOS: play() is called synchronously inside the user's tap/click.
     const playPromise = backgroundMusic.play();
     if (playPromise && typeof playPromise.then === "function") {
       playPromise
         .then(() => {
-          fadeMusicTo(MUSIC_TARGET_VOLUME, 2400);
           updateMusicToggle(true);
+          musicToggle?.classList.remove("needs-tap");
         })
         .catch(() => {
+          // Some mobile browsers can still require a second explicit tap.
+          // The small music control remains as a reliable manual fallback.
           updateMusicToggle(false);
+          musicToggle?.classList.add("needs-tap");
         });
+    } else {
+      updateMusicToggle(true);
     }
   }
 
   function toggleBackgroundMusic() {
     if (!backgroundMusic) return;
-
-    if (!musicHasStarted) {
-      musicMutedByUser = false;
-      startBackgroundMusic();
-      return;
-    }
-
-    if (backgroundMusic.paused || musicMutedByUser) {
-      musicMutedByUser = false;
-      backgroundMusic.play()
-        .then(() => {
-          fadeMusicTo(MUSIC_TARGET_VOLUME, 900);
-          updateMusicToggle(true);
-        })
-        .catch(() => updateMusicToggle(false));
+    if (backgroundMusic.paused) {
+      const playPromise = backgroundMusic.play();
+      if (playPromise && typeof playPromise.then === "function") {
+        playPromise
+          .then(() => {
+            updateMusicToggle(true);
+            musicToggle?.classList.remove("needs-tap");
+          })
+          .catch(() => {
+            updateMusicToggle(false);
+            musicToggle?.classList.add("needs-tap");
+          });
+      } else {
+        updateMusicToggle(true);
+      }
     } else {
-      musicMutedByUser = true;
-      fadeMusicTo(0, 500, () => {
-        backgroundMusic.pause();
-        updateMusicToggle(false);
-      });
+      backgroundMusic.pause();
+      updateMusicToggle(false);
     }
   }
 
@@ -220,31 +206,6 @@
     musicToggle.setAttribute("aria-pressed", isPlaying ? "true" : "false");
     musicToggle.setAttribute("aria-label", isPlaying ? "Pause background music" : "Play background music");
     musicToggle.title = isPlaying ? "Pause background music" : "Play background music";
-  }
-
-  function fadeMusicTo(targetVolume, duration = 1000, onComplete = null) {
-    if (!backgroundMusic) return;
-    if (musicFadeFrame) cancelAnimationFrame(musicFadeFrame);
-
-    const startVolume = backgroundMusic.volume;
-    const safeTarget = Math.max(0, Math.min(1, targetVolume));
-    const startedAt = performance.now();
-
-    const step = (now) => {
-      const progress = Math.min((now - startedAt) / Math.max(duration, 1), 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      backgroundMusic.volume = startVolume + (safeTarget - startVolume) * eased;
-
-      if (progress < 1) {
-        musicFadeFrame = requestAnimationFrame(step);
-      } else {
-        musicFadeFrame = null;
-        backgroundMusic.volume = safeTarget;
-        if (typeof onComplete === "function") onComplete();
-      }
-    };
-
-    musicFadeFrame = requestAnimationFrame(step);
   }
 
   function buildLetterFlow(paragraphs) {
@@ -369,10 +330,6 @@
 
     finishDialog.classList.add("confirming");
     createEraseDust();
-    if (backgroundMusic && !backgroundMusic.paused) {
-      fadeMusicTo(0, 2600, () => backgroundMusic.pause());
-      updateMusicToggle(false);
-    }
 
     window.setTimeout(() => {
       finishDialog.classList.remove("active");

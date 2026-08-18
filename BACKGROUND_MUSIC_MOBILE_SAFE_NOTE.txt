@@ -1,0 +1,11 @@
+BACKGROUND MUSIC — MOBILE SAFE VERSION
+
+- Based on the preferred RANDOM Ticket Codes website supplied by the user.
+- Design and recipient themes are unchanged.
+- Track is pre-mixed to about 12% loudness and fades in for 2 seconds INSIDE the MP3 file.
+- No Web Audio API / GainNode is used. This avoids the mobile/iPhone silence issue from the previous attempt.
+- Music starts on the direct tap/click of the envelope or Open your letter button.
+- A small music button is available as a manual play/pause fallback.
+
+Important mobile-browser limitation:
+Browsers such as iPhone Safari do not allow audible autoplay before a user gesture. Therefore the reliable start point is the recipient's tap on Open your letter.
