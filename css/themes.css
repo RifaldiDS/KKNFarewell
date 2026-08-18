@@ -1,0 +1,458 @@
+/* =========================================================
+   PERSONAL MESSAGE THEMES
+   Each recipient receives a distinct visual world.
+   Themes are original interpretations of the supplied references.
+   ========================================================= */
+
+/* ---------- EULALIE — blush butterflies / apology & closure ---------- */
+body[data-theme="eulalie"] {
+  --theme-accent: #f7a3c4;
+  --theme-heading: #fff9fb;
+  --theme-muted: rgba(255, 241, 248, 0.78);
+  --theme-line: rgba(255, 222, 238, 0.25);
+  --theme-glass: rgba(255, 221, 237, 0.1);
+  --theme-glass-hover: rgba(255, 221, 237, 0.17);
+  --theme-envelope: #f1b6ce;
+  --theme-envelope-front: #e78ab6;
+  --theme-envelope-flap: #ffd7e7;
+  --theme-button: linear-gradient(135deg, #fff6fa, #f6bed6);
+  --theme-button-text: #642c50;
+  --theme-glow-one: #f287b7;
+  --theme-glow-two: #70b8e8;
+  --theme-particle: rgba(255, 225, 241, 0.78);
+  color: #fff7fb;
+  background:
+    radial-gradient(circle at 48% 25%, rgba(105,176,225,.18), transparent 28%),
+    linear-gradient(145deg, #502541 0%, #84365e 47%, #3c416f 100%);
+}
+
+body[data-theme="eulalie"] .theme-background::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .14;
+  background:
+    repeating-radial-gradient(ellipse at 20% 40%, transparent 0 42px, rgba(255,210,233,.3) 44px 45px, transparent 47px 80px);
+}
+
+body[data-theme="eulalie"] .motif {
+  position: absolute;
+}
+
+body[data-theme="eulalie"] .motif-one,
+body[data-theme="eulalie"] .motif-two,
+body[data-theme="eulalie"] .motif-three {
+  width: 92px;
+  height: 72px;
+}
+
+body[data-theme="eulalie"] .motif-one::before,
+body[data-theme="eulalie"] .motif-one::after,
+body[data-theme="eulalie"] .motif-two::before,
+body[data-theme="eulalie"] .motif-two::after,
+body[data-theme="eulalie"] .motif-three::before,
+body[data-theme="eulalie"] .motif-three::after {
+  position: absolute;
+  top: 5px;
+  width: 47px;
+  height: 61px;
+  content: "";
+  border: 2px solid rgba(255,209,235,.52);
+  border-radius: 72% 28% 66% 34% / 64% 38% 62% 36%;
+  background: rgba(237,116,177,.12);
+}
+
+body[data-theme="eulalie"] .motif-one::before,
+body[data-theme="eulalie"] .motif-two::before,
+body[data-theme="eulalie"] .motif-three::before {
+  left: 2px;
+  transform: rotate(-26deg);
+}
+
+body[data-theme="eulalie"] .motif-one::after,
+body[data-theme="eulalie"] .motif-two::after,
+body[data-theme="eulalie"] .motif-three::after {
+  right: 2px;
+  transform: rotate(26deg) scaleX(-1);
+}
+
+body[data-theme="eulalie"] .motif-one { left: 7%; top: 20%; transform: rotate(-14deg) scale(.85); }
+body[data-theme="eulalie"] .motif-two { right: 8%; top: 14%; transform: rotate(18deg) scale(1.15); }
+body[data-theme="eulalie"] .motif-three { right: 16%; bottom: 12%; transform: rotate(-7deg) scale(.68); }
+
+body[data-theme="eulalie"] .motif-four,
+body[data-theme="eulalie"] .motif-five {
+  width: 180px;
+  height: 90px;
+  border: 3px solid rgba(103,184,229,.34);
+  border-color: rgba(103,184,229,.34) transparent transparent transparent;
+  border-radius: 50%;
+}
+
+body[data-theme="eulalie"] .motif-four { left: -45px; bottom: 18%; transform: rotate(22deg); }
+body[data-theme="eulalie"] .motif-five { right: -38px; top: 43%; transform: rotate(-28deg); }
+
+body[data-theme="eulalie"] .letter-card {
+  background:
+    linear-gradient(rgba(255,250,251,.95), rgba(255,250,251,.95)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(165,71,117,.05) 32px);
+  box-shadow: 0 35px 100px rgba(49,22,51,.28);
+}
+
+/* ---------- ILIAD — amber geometry / warm gratitude ---------- */
+body[data-theme="iliad"] {
+  --theme-accent: #ffd180;
+  --theme-heading: #fff9e9;
+  --theme-muted: rgba(255, 235, 202, 0.78);
+  --theme-line: rgba(255, 220, 161, 0.25);
+  --theme-glass: rgba(255, 211, 137, 0.09);
+  --theme-glass-hover: rgba(255, 211, 137, 0.16);
+  --theme-envelope: #e8a14e;
+  --theme-envelope-front: #c97735;
+  --theme-envelope-flap: #f5bf6d;
+  --theme-button: linear-gradient(135deg, #fff6da, #f6bf63);
+  --theme-button-text: #57311d;
+  --theme-glow-one: #e47b2f;
+  --theme-glow-two: #3e7d94;
+  --theme-particle: rgba(255, 221, 162, 0.84);
+  color: #fff8e9;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255,195,92,.18), transparent 26%),
+    linear-gradient(145deg, #3a3430 0%, #824327 47%, #234b5c 100%);
+}
+
+body[data-theme="iliad"] .theme-background::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .18;
+  background:
+    linear-gradient(115deg, transparent 0 46%, rgba(255,219,148,.2) 47% 48%, transparent 49% 100%),
+    linear-gradient(24deg, transparent 0 44%, rgba(69,135,155,.23) 45% 46%, transparent 47% 100%);
+  background-size: 170px 170px, 220px 220px;
+}
+
+body[data-theme="iliad"] .motif {
+  position: absolute;
+}
+
+body[data-theme="iliad"] .motif-one {
+  width: 170px;
+  height: 170px;
+  left: 7%;
+  top: 16%;
+  border: 18px double rgba(255,191,95,.34);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 16px rgba(40,104,128,.15);
+  transform: rotate(18deg);
+}
+
+body[data-theme="iliad"] .motif-two {
+  width: 86px;
+  height: 125px;
+  right: 9%;
+  top: 15%;
+  background: linear-gradient(135deg, rgba(255,194,94,.38), rgba(179,82,39,.12));
+  border: 3px solid rgba(255,226,170,.34);
+  clip-path: polygon(50% 0, 100% 18%, 88% 78%, 50% 100%, 12% 78%, 0 18%);
+  transform: rotate(-12deg);
+}
+
+body[data-theme="iliad"] .motif-three,
+body[data-theme="iliad"] .motif-four,
+body[data-theme="iliad"] .motif-five {
+  width: 150px;
+  height: 8px;
+  background: linear-gradient(90deg, transparent, rgba(255,230,180,.48), transparent);
+  border-radius: 999px;
+}
+
+body[data-theme="iliad"] .motif-three { left: 4%; bottom: 22%; transform: rotate(-28deg); }
+body[data-theme="iliad"] .motif-four { right: 3%; bottom: 27%; transform: rotate(31deg); }
+body[data-theme="iliad"] .motif-five { right: 18%; top: 48%; transform: rotate(-8deg) scale(.65); }
+
+body[data-theme="iliad"] .letter-card {
+  background:
+    linear-gradient(rgba(255,250,239,.96), rgba(255,250,239,.96)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(126,70,32,.06) 32px);
+  box-shadow: 0 35px 100px rgba(53,30,20,.3);
+}
+
+/* ---------- OSTARA — rose garden / quiet admiration ---------- */
+body[data-theme="ostara"] {
+  --theme-accent: #ffd0dc;
+  --theme-heading: #fffaf6;
+  --theme-muted: rgba(255, 238, 240, 0.79);
+  --theme-line: rgba(255, 222, 225, 0.25);
+  --theme-glass: rgba(255, 225, 229, 0.09);
+  --theme-glass-hover: rgba(255, 225, 229, 0.16);
+  --theme-envelope: #e6a6b4;
+  --theme-envelope-front: #c9788d;
+  --theme-envelope-flap: #f3c8cf;
+  --theme-button: linear-gradient(135deg, #fff7f2, #efc0ca);
+  --theme-button-text: #5f3445;
+  --theme-glow-one: #ad677f;
+  --theme-glow-two: #8b7db5;
+  --theme-particle: rgba(255, 224, 231, 0.8);
+  color: #fff8f6;
+  background:
+    radial-gradient(circle at 51% 18%, rgba(255,210,219,.16), transparent 26%),
+    linear-gradient(145deg, #473242 0%, #764657 48%, #67547a 100%);
+}
+
+body[data-theme="ostara"] .theme-background::before,
+body[data-theme="ostara"] .theme-background::after {
+  position: absolute;
+  content: "";
+  width: 330px;
+  height: 540px;
+  top: -80px;
+  border: 3px solid rgba(243,180,202,.2);
+  border-radius: 50% 50% 42% 58% / 62% 42% 58% 38%;
+}
+
+body[data-theme="ostara"] .theme-background::before {
+  left: -100px;
+  transform: rotate(-25deg);
+}
+
+body[data-theme="ostara"] .theme-background::after {
+  right: -90px;
+  transform: rotate(24deg) scaleX(-1);
+}
+
+body[data-theme="ostara"] .motif {
+  position: absolute;
+}
+
+body[data-theme="ostara"] .motif-one,
+body[data-theme="ostara"] .motif-two,
+body[data-theme="ostara"] .motif-three,
+body[data-theme="ostara"] .motif-four,
+body[data-theme="ostara"] .motif-five {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,231,189,.9) 0 9%, transparent 10%),
+    radial-gradient(ellipse at 50% 18%, rgba(245,168,195,.55) 0 22%, transparent 23%),
+    radial-gradient(ellipse at 82% 43%, rgba(255,211,220,.42) 0 22%, transparent 23%),
+    radial-gradient(ellipse at 69% 79%, rgba(191,134,183,.5) 0 22%, transparent 23%),
+    radial-gradient(ellipse at 31% 79%, rgba(242,147,181,.48) 0 22%, transparent 23%),
+    radial-gradient(ellipse at 18% 43%, rgba(255,211,220,.4) 0 22%, transparent 23%);
+  box-shadow: 0 0 0 2px rgba(255,222,230,.12);
+}
+
+body[data-theme="ostara"] .motif-one { left: 8%; top: 18%; transform: scale(1.3) rotate(17deg); }
+body[data-theme="ostara"] .motif-two { left: 18%; bottom: 15%; transform: scale(.75) rotate(-13deg); }
+body[data-theme="ostara"] .motif-three { right: 9%; top: 16%; transform: scale(.9) rotate(9deg); }
+body[data-theme="ostara"] .motif-four { right: 14%; bottom: 13%; transform: scale(1.5) rotate(-19deg); }
+body[data-theme="ostara"] .motif-five { right: 29%; top: 47%; transform: scale(.48); opacity: .7; }
+
+body[data-theme="ostara"] .letter-card {
+  background:
+    linear-gradient(rgba(255,251,247,.96), rgba(255,251,247,.96)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(122,72,92,.05) 32px);
+  box-shadow: 0 35px 100px rgba(46,28,50,.29);
+}
+
+/* ---------- Shared thematic finishing ---------- */
+.theme-background {
+  position: fixed;
+  z-index: -2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.theme-motif,
+.particles {
+  position: absolute;
+  inset: 0;
+}
+
+.message-page::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  opacity: .085;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.message-page .intro-scene h1 {
+  font-family: "Italiana", "Playfair Display", serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.message-page .envelope {
+  filter: drop-shadow(0 27px 34px rgba(0,0,0,.24));
+}
+
+.message-page .envelope-back,
+.message-page .envelope-front,
+.message-page .envelope-flap {
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.message-page .primary-button {
+  border: 1px solid rgba(255,255,255,.36);
+  border-radius: 999px;
+  box-shadow: 0 15px 38px rgba(0,0,0,.13);
+}
+
+.message-page .letter-card {
+  border-radius: 18px 18px 18px 5px;
+}
+
+@media (max-width: 700px) {
+  .theme-motif {
+    opacity: .62;
+  }
+
+  body[data-theme="eulalie"] .motif-one,
+  body[data-theme="iliad"] .motif-one,
+  body[data-theme="ostara"] .motif-one {
+    left: -18px;
+  }
+
+  body[data-theme="eulalie"] .motif-two,
+  body[data-theme="iliad"] .motif-two,
+  body[data-theme="ostara"] .motif-three {
+    right: -20px;
+  }
+}
+
+
+/* ---------- MINOUET — surreal dreamscape / postponed words ---------- */
+body[data-theme="minouet"] {
+  --theme-accent: #ffd4ea;
+  --theme-heading: #fffafd;
+  --theme-muted: rgba(255, 237, 247, 0.8);
+  --theme-line: rgba(255, 220, 240, 0.24);
+  --theme-glass: rgba(255, 228, 242, 0.09);
+  --theme-glass-hover: rgba(255, 228, 242, 0.16);
+  --theme-envelope: #d995bd;
+  --theme-envelope-front: #a85f98;
+  --theme-envelope-flap: #efbcd3;
+  --theme-button: linear-gradient(135deg, #fff7fb, #a8dfec);
+  --theme-button-text: #52345f;
+  --theme-glow-one: #d365a0;
+  --theme-glow-two: #67bdd4;
+  --theme-particle: rgba(255, 230, 246, 0.84);
+  color: #fff8fd;
+  background:
+    radial-gradient(circle at 72% 17%, rgba(112,204,221,.23), transparent 25%),
+    radial-gradient(circle at 18% 82%, rgba(230,104,159,.19), transparent 26%),
+    linear-gradient(145deg, #403457 0%, #75527e 46%, #2d6579 100%);
+}
+
+body[data-theme="minouet"] .theme-background::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .2;
+  background:
+    radial-gradient(ellipse at 20% 28%, rgba(255,238,248,.3) 0 4%, transparent 5%),
+    radial-gradient(ellipse at 73% 17%, rgba(187,232,241,.25) 0 5%, transparent 6%),
+    repeating-radial-gradient(ellipse at 52% 76%, transparent 0 45px, rgba(255,205,231,.17) 47px 49px, transparent 51px 90px);
+}
+
+body[data-theme="minouet"] .motif { position: absolute; }
+body[data-theme="minouet"] .motif-one,
+body[data-theme="minouet"] .motif-two {
+  width: 200px;
+  height: 70px;
+  border-radius: 999px;
+  background: rgba(255,236,245,.12);
+  box-shadow: 58px -22px 0 rgba(190,225,239,.1), 112px 4px 0 rgba(255,236,245,.08);
+}
+body[data-theme="minouet"] .motif-one { left: -30px; top: 19%; transform: rotate(9deg); }
+body[data-theme="minouet"] .motif-two { right: -50px; bottom: 19%; transform: rotate(-12deg) scale(.8); }
+body[data-theme="minouet"] .motif-three {
+  width: 190px; height: 260px; left: 8%; bottom: -90px;
+  border: 3px solid rgba(255,210,234,.18); border-radius: 50% 50% 8% 8%;
+}
+body[data-theme="minouet"] .motif-four {
+  width: 150px; aspect-ratio: 1; right: 9%; top: 13%; border: 3px solid rgba(160,222,236,.22); border-radius: 50%;
+}
+body[data-theme="minouet"] .motif-five {
+  width: 230px; height: 95px; right: 24%; top: 46%; border: 4px solid transparent; border-top-color: rgba(255,216,235,.2); border-radius: 50%; transform: rotate(-19deg);
+}
+
+body[data-theme="minouet"] .letter-card {
+  background:
+    linear-gradient(rgba(255,250,251,.96), rgba(255,250,251,.96)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(103,74,124,.05) 32px);
+  box-shadow: 0 35px 100px rgba(44,28,58,.3);
+}
+
+/* ---------- SOTB — vivid coral / direct accountability ---------- */
+body[data-theme="sotb"] {
+  --theme-accent: #ffd57d;
+  --theme-heading: #fff9ef;
+  --theme-muted: rgba(255, 232, 214, 0.82);
+  --theme-line: rgba(255, 213, 160, 0.24);
+  --theme-glass: rgba(255, 199, 151, 0.09);
+  --theme-glass-hover: rgba(255, 199, 151, 0.16);
+  --theme-envelope: #f38d63;
+  --theme-envelope-front: #cf4b62;
+  --theme-envelope-flap: #ffb56c;
+  --theme-button: linear-gradient(135deg, #fff4da, #ffb35c);
+  --theme-button-text: #6a2940;
+  --theme-glow-one: #f15b62;
+  --theme-glow-two: #b72464;
+  --theme-particle: rgba(255, 220, 143, 0.86);
+  color: #fff9f1;
+  background:
+    radial-gradient(circle at 72% 16%, rgba(255,197,77,.2), transparent 24%),
+    radial-gradient(circle at 13% 78%, rgba(205,43,91,.25), transparent 27%),
+    linear-gradient(145deg, #7a294b 0%, #bf3b5d 47%, #c75d37 100%);
+}
+
+body[data-theme="sotb"] .theme-background::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .18;
+  background:
+    linear-gradient(28deg, transparent 0 44%, rgba(255,218,125,.2) 45% 47%, transparent 48%),
+    repeating-radial-gradient(circle at 78% 22%, transparent 0 36px, rgba(255,183,94,.16) 38px 40px, transparent 42px 78px);
+}
+
+body[data-theme="sotb"] .motif { position: absolute; }
+body[data-theme="sotb"] .motif-one,
+body[data-theme="sotb"] .motif-two,
+body[data-theme="sotb"] .motif-three {
+  width: 180px;
+  height: 90px;
+  border: 7px solid transparent;
+  border-top-color: rgba(255,220,140,.28);
+  border-radius: 50%;
+}
+body[data-theme="sotb"] .motif-one { left: -35px; top: 18%; transform: rotate(22deg); }
+body[data-theme="sotb"] .motif-two { right: -30px; top: 39%; transform: rotate(-26deg) scale(1.25); }
+body[data-theme="sotb"] .motif-three { left: 32%; bottom: 3%; transform: rotate(9deg) scale(.72); }
+body[data-theme="sotb"] .motif-four {
+  width: 110px; aspect-ratio: 1; right: 13%; top: 11%; border: 11px solid rgba(255,200,81,.22); border-radius: 50%;
+}
+body[data-theme="sotb"] .motif-five {
+  width: 60px; aspect-ratio: 1; left: 12%; bottom: 12%; border-radius: 50%; background: rgba(102,28,73,.22); box-shadow: 50px -21px 0 rgba(255,197,101,.14);
+}
+
+body[data-theme="sotb"] .letter-card {
+  background:
+    linear-gradient(rgba(255,250,241,.96), rgba(255,250,241,.96)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(148,53,69,.055) 32px);
+  box-shadow: 0 35px 100px rgba(74,27,43,.31);
+}
+
+@media (max-width: 700px) {
+  body[data-theme="minouet"] .motif-one,
+  body[data-theme="sotb"] .motif-one { left: -70px; }
+  body[data-theme="minouet"] .motif-four,
+  body[data-theme="sotb"] .motif-four { right: -30px; }
+}

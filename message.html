@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="A personal message, written for you." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/branding/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/branding/favicon-192.png" />
+  <title>Your KKN Farewell Letter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/themes.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/message-v2.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/recipient-designs.css?v=20260818-30unique" />
+</head>
+<body class="message-page" data-theme="eulalie">
+  <div class="theme-background" aria-hidden="true">
+    <span class="glow glow-one"></span>
+    <span class="glow glow-two"></span>
+    <div class="theme-motif">
+      <span class="motif motif-one"></span>
+      <span class="motif motif-two"></span>
+      <span class="motif motif-three"></span>
+      <span class="motif motif-four"></span>
+      <span class="motif motif-five"></span>
+    </div>
+    <div id="particles" class="particles"></div>
+  </div>
+
+  <header class="message-header">
+    <div class="brand message-brand-static" aria-label="KKN FAREWELL — one last letter">
+      <img class="message-brand-logo" src="assets/branding/unsent-mark.png" alt="" aria-hidden="true" />
+      <span class="message-brand-copy"><strong>KKN FAREWELL</strong><small>one last letter</small></span>
+    </div>
+    <div class="header-actions">
+      <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Pause background music" title="Background music">
+        <span class="music-toggle-icon" aria-hidden="true">♪</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="message-shell">
+    <section id="introScene" class="intro-scene" aria-labelledby="messageTitle">
+      <div class="edition-card">
+        <div class="edition-art" aria-hidden="true">
+          <span class="art-sun"></span>
+          <span class="art-moon"></span>
+          <span class="art-portal"></span>
+          <span class="art-wing art-wing-left"></span>
+          <span class="art-wing art-wing-right"></span>
+          <span class="art-ribbon art-ribbon-one"></span>
+          <span class="art-ribbon art-ribbon-two"></span>
+          <span class="art-shield"></span>
+          <span class="art-helmet"></span>
+          <span class="art-spear art-spear-one"></span>
+          <span class="art-spear art-spear-two"></span>
+          <span class="art-figure"></span>
+          <span class="art-flower art-flower-one"></span>
+          <span class="art-flower art-flower-two"></span>
+          <span class="art-flower art-flower-three"></span>
+          <span class="art-leaf art-leaf-one"></span>
+          <span class="art-leaf art-leaf-two"></span>
+          <span class="art-cloud art-cloud-one"></span>
+          <span class="art-cloud art-cloud-two"></span>
+          <span class="art-castle"><i></i><i></i><i></i></span>
+          <span class="art-whale"></span>
+          <span class="art-orbit"></span>
+          <span class="art-hand"></span>
+          <span class="art-wave art-wave-one"></span>
+          <span class="art-wave art-wave-two"></span>
+          <span class="art-spark art-spark-one">✦</span>
+          <span class="art-spark art-spark-two">✦</span>
+          <span class="art-caption">A KKN FAREWELL EDITION</span>
+        </div>
+
+        <div class="edition-copy">
+          <div class="edition-topline">
+            <span id="introThemeLabel">KKN Farewell</span>
+            <span>NO. 02</span>
+          </div>
+
+          <p id="messageKicker" class="message-kicker">A farewell letter for</p>
+          <h1 id="messageTitle">Someone Special</h1>
+          <p id="messageSubtitle" class="message-subtitle">A little piece of our KKN story, just for you.</p>
+
+          <div class="envelope-wrap">
+            <button id="openLetterButton" class="envelope" type="button" aria-label="Buka surat">
+              <span class="envelope-back"></span>
+              <span class="letter-preview">
+                <span class="letter-lines"></span>
+                <span class="letter-seal">✦</span>
+              </span>
+              <span class="envelope-front"></span>
+              <span class="envelope-flap"></span>
+            </button>
+          </div>
+
+          <button id="openTextButton" class="primary-button" type="button">Open your letter <span>↗</span></button>
+          <p class="edition-note">This farewell letter opens only for its intended recipient.</p>
+        </div>
+
+        <div class="edition-spine" aria-hidden="true">
+          <span>MEMORIES WE MADE</span>
+          <strong>02</strong>
+        </div>
+      </div>
+    </section>
+
+    <div id="themeTransition" class="theme-transition" aria-hidden="true">
+      <span class="transition-shape transition-shape-one"></span>
+      <span class="transition-shape transition-shape-two"></span>
+      <span class="transition-shape transition-shape-three"></span>
+      <span class="transition-shape transition-shape-four"></span>
+      <span class="transition-caption" id="transitionCaption">Opening your farewell letter</span>
+    </div>
+
+    <article id="letterScene" class="letter-scene" aria-hidden="true">
+      <div class="letter-stage">
+        <div class="letter-side-title" aria-hidden="true">
+          <span>FAREWELL LETTER</span>
+          <strong id="letterThemeLabel">KKN Farewell</strong>
+        </div>
+
+        <div class="letter-card">
+          <div class="letter-poster-band" aria-hidden="true">
+            <span class="band-orb band-orb-one"></span>
+            <span class="band-orb band-orb-two"></span>
+            <span class="band-line band-line-one"></span>
+            <span class="band-line band-line-two"></span>
+            <span class="band-mark">✦</span>
+          </div>
+
+          <div class="letter-topline">
+            <span id="letterDate">27 June 2026</span>
+            <span class="letter-symbol">✦</span>
+          </div>
+
+          <p id="letterGreeting" class="letter-greeting">Dear friend,</p>
+          <div id="letterBody" class="letter-body"></div>
+
+          <section id="pauseScene" class="pause-scene" aria-hidden="true">
+            <div class="pause-art" aria-hidden="true">
+              <span class="pause-orb pause-orb-one"></span>
+              <span class="pause-orb pause-orb-two"></span>
+              <span class="pause-line pause-line-one"></span>
+              <span class="pause-line pause-line-two"></span>
+              <span class="pause-flourish pause-flourish-one"></span>
+              <span class="pause-flourish pause-flourish-two"></span>
+            </div>
+            <p id="pauseQuote" class="pause-quote">Some memories deserve a gentler place to land.</p>
+            <span id="pauseCaption" class="pause-caption">a quiet pause</span>
+          </section>
+
+          <div class="letter-closing">
+            <p id="closingText">Thank you for being part of my story.</p>
+            <div class="signature-block">
+              <span>With sincerity,</span>
+              <strong id="signatureName">— Someone who is learning</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="after-message completion-panel">
+        <span class="final-mark">✦</span>
+        <p class="completion-kicker">Before we say goodbye</p>
+        <h2>Have you finished reading your letter?</h2>
+        <p class="completion-copy">Take all the time you need. Once you confirm, this farewell letter will quietly disappear and cannot be opened again in this browser.</p>
+        <button id="finishReadingButton" class="secondary-button finish-reading-button" type="button">I’ve finished my letter</button>
+      </div>
+    </article>
+  </main>
+
+  <div id="finishDialog" class="finish-dialog" aria-hidden="true">
+    <div class="finish-dialog-backdrop" data-dialog-close></div>
+    <section class="finish-dialog-card" role="dialog" aria-modal="true" aria-labelledby="finishDialogTitle" aria-describedby="finishDialogText">
+      <span class="finish-dialog-mark" aria-hidden="true">✦</span>
+      <p class="finish-dialog-kicker">One last confirmation</p>
+      <h2 id="finishDialogTitle">Ready to close this farewell letter?</h2>
+      <p id="finishDialogText">After you continue, this letter will fade away and the Ticket No. will no longer open it on this browser.</p>
+      <div class="finish-dialog-actions">
+        <button id="keepReadingButton" class="dialog-button dialog-button-secondary" type="button">Not yet</button>
+        <button id="confirmFinishButton" class="dialog-button dialog-button-primary" type="button">Yes, close the letter</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="eraseDust" class="erase-dust" aria-hidden="true"></div>
+
+  <div id="goodbyeScreen" class="goodbye-screen" aria-hidden="true">
+    <span class="goodbye-mark">✦</span>
+    <p>This farewell letter has closed.</p>
+    <small>Thank you for being part of our KKN story.</small>
+  </div>
+
+
+  <div id="privacyShield" class="privacy-shield" aria-hidden="true">
+    <div class="privacy-shield-card">
+      <span aria-hidden="true">✦</span>
+      <p>Farewell letter hidden</p>
+      <small>Return to this window to continue your letter.</small>
+    </div>
+  </div>
+
+  <div id="privacyNotice" class="privacy-notice" role="status" aria-live="polite">
+    This farewell letter is personal and cannot be copied.
+  </div>
+
+  <audio id="backgroundMusic" preload="metadata" loop>
+    <source src="assets/audio/titik-nadir-karaoke-piano.mp3" type="audio/mpeg" />
+  </audio>
+
+  <footer class="message-footer">
+    <span id="themeLabel">KKN Farewell</span>
+    <span>Made for the memories we shared.</span>
+  </footer>
+
+  <script src="js/messages.js?v=20260629-scrollfix3"></script>
+  <script src="js/message.js?v=20260629-scrollfix3"></script>
+</body>
+</html>

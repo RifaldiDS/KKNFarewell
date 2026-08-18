@@ -1,0 +1,12 @@
+BACKGROUND MUSIC
+================
+Track: Titik Nadir - Kahitna Feat. Monita Tahalea (Karaoke Piano)
+
+Behavior:
+- Original website/design is preserved.
+- Music begins only when the recipient clicks the envelope or Open your letter.
+- Target volume is intentionally soft: 0.16 (16%).
+- 2.4 second fade-in to avoid a sudden loud start.
+- Small music button allows pause/play.
+- Music pauses when the tab is hidden and resumes when the recipient returns (unless manually paused).
+- Music fades out when the recipient confirms they have finished reading.

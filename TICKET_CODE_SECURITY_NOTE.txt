@@ -1,0 +1,3 @@
+Ticket codes were changed from sequential numbers to recipient-initial + randomized 3-digit suffix.
+Example format only: KKN-2608-A583
+The private owner code list is intentionally NOT included in this deploy folder.

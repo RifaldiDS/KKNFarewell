@@ -1,0 +1,9 @@
+UNSENT — Scroll Fix v3
+
+Upload/replace every file in this folder to the root of your GitHub Pages repository.
+Do not upload only index.html because the fix also changes css/landing-v2.css and js/app.js.
+After GitHub finishes deploying, hard-refresh the page once (Ctrl+F5 or Cmd+Shift+R).
+
+
+UPDATE: PAGE 2 STATIC BRAND
+The UNSENT logo/wordmark on message.html is now display-only and no longer links back to index.html.

@@ -1,0 +1,6 @@
+KKN FAREWELL — 30 UNIQUE LETTER DESIGNS
+
+This version keeps the existing landing page, Ticket No validation, one-time reading, privacy behavior, and message database logic.
+Only the letter world after opening is personalized per recipient.
+
+Each of the 30 recipients has a unique data-design value and visual styling in css/recipient-designs.css.
